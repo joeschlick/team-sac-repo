@@ -14,50 +14,75 @@
         <div class="medium-6 columns">
         <input  id="search-city" type="text" placeholder="Input City">
         </div>
-
+        
         <div class="medium-6 columns">
-        <input  id="search-state" type="text" placeholder="Input State">
+          <select name="states" id="state-selector">
+            <option value="AK">Alabama</option>
+            <option value="AL">Alaska</option>
+            <option value="AR">Arizona</option>
+            <option value="AZ">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="IA">Idaho</option>
+            <option value="ID">Illinois</option>
+            <option value="IL">Indiana</option>
+            <option value="IN">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="MA">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="ME">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MO">Mississippi</option>
+            <option value="MS">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NC">Nebraska</option>
+            <option value="ND">Nevada</option>
+            <option value="NE">New Hampshire</option> 
+            <option value="NH">New Jersey</option> 
+            <option value="NJ">New Mexico</option> 
+            <option value="NM">New York</option> 
+            <option value="NV">North Carolina</option>
+            <option value="NY">North Dakota</option> 
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option> 
+            <option value="SD">South Dakota</option> 
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VA">Vermont</option>
+            <option value="VT">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WI">West</option> Virginia
+            <option value="WV">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
         </div>
+        
+
         <a href="#" class="secondary button" id="run-search">Search</a>
+      <button class="secondary button" id="search-btn">Search</button>
       </div>
     </div>
-
-    
-
-        <!-- forecast section start -->
+  
+     <!-- forecast section start -->
     <!-- medium-2 columns -->
     <div class="row">
-      <div class="five-day-forecast">
-      
-      
-      
-      <div class="medium-2 columns">
-        <h3 id="date1">Day 1</h3>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-      </div>
-      <div class="medium-2 columns">
-        <h3 id="date2">Day 2</h3>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-      </div>
-      <div class="medium-2 columns">
-        <h3 id="date3">Day 3</h3>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-      </div>
-      <div class="medium-2 columns">
-        <h3 id="date4">Day 4</h3>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-      </div>
-      <div class="medium-2 columns">
-        <h3 id="date5">Day 5</h3>
-        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-      </div>
-      <div class="medium-2 columns">
-        <!-- <h3>Marketing</h3> -->
-        <!-- <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p> -->
-      </div>
+      <div class="five-day-forecast" id="five-day-forecast"></div>
     </div>
     <!-- forecast section end -->
-
+      
     <div class="row">
       <!-- <div data-post-id="50079" data-site-id="499" data-site-root-folder="coronavirus" class="mb-3" data-host="www.cdc.gov" data-theme="theme-cyan" data-cdc-widget="cdcMaps" data-config-url="/coronavirus/2019-ncov/cases-updates/us-case-count-maps-charts/map-cases-us-CaseOnly_Desktop.json">
       </div>
@@ -82,42 +107,6 @@
       </div>
 
     </div>
-
-
-
-
-
-
-    <!-- <hr>
-
-    <div class="row column">
-      <ul class="vertical medium-horizontal menu expanded text-center">
-        <li><a href="#"><div class="stat">28</div><span>Websites</span></a></li>
-        <li><a href="#"><div class="stat">43</div><span>Apps</span></a></li>
-        <li><a href="#"><div class="stat">95</div><span>Ads</span></a></li>
-        <li><a href="#"><div class="stat">59</div><span>Cakes</span></a></li>
-        <li><a href="#"><div class="stat">18</div><span>Logos</span></a></li>
-      </ul>
-    </div>
-
-    <hr> -->
-
-    <!-- <div class="row column">
-      <h3>Our Recent Work</h3>
-    </div>
-
-    
-
-    <hr>
-
-    <div class="row column">
-      <ul class="menu">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
-    </div> -->
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
