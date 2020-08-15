@@ -1,6 +1,7 @@
 //api for covid data by state http://coronavirusapi.com/getTimeSeries/[2 letter state abbreviation]
 //openweathermap current conditions url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchField + "&appid=53d2f99f562f36701d4bf49111eb24c6",
 $(document).ready(function () {
+
   var runSearch = $("#run-search");
 
   runSearch.click(function () {
@@ -57,7 +58,7 @@ function Forecast() {
 
       if (i === 2) {
         $("#five-day-forecast").append(`<div class="medium-2 columns">
-            <h3>Today In: ${apiFunction.city_name} </h3>
+        <h3>Today In: ${apiFunction.city_name} </h3>
             <p>High Temp: ${Math.round(highTempInFahrenheit)}</p>
             <p>Low Temp: ${Math.round(lowTempInFahrenheit)}</p>
             <p>Current Condition: ${apiFunction.data[i].weather.description}
@@ -67,7 +68,6 @@ function Forecast() {
       } else if (i >= 7) {
         break;
       }
-
       const myDate = new Date(
         apiFunction.data[i].valid_date
       ).toLocaleDateString();
@@ -82,3 +82,54 @@ function Forecast() {
     }
   });
 }
+
+  var runSearch = $("#search-btn");
+
+  runSearch.click(function () {
+    var searchCity = $("#search-city").val();
+    var searchState = $("#search-state").val();
+    console.log("click");
+    console.log(searchCity);
+    console.log(searchState);
+    articleSearch(searchCity, searchState);
+  });
+
+  function articleSearch(city, state) {
+    var newsQueryURL =
+      "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+      city +
+      " " +
+      state +
+      "&api-key=6bx62GJuVcNmyKs61ltfKzawldq2gfs0";
+    console.log(newsQueryURL);
+    $.ajax({
+      url: newsQueryURL,
+      method: "GET",
+      dataType: "json",
+    }).then(function (response1) {
+      console.log(response1);
+
+      for (let i = 0; i < 5; i++) {
+        var articles = response1.response.docs[i];
+        var articleSpace = $("#article-space");
+        var articleRow = $("<div>").attr("class", "article-row");
+        var articleContent = $("<div>").attr("class", "article-content");
+        articleSpace.append(articleRow);
+        articleRow.append(articleContent);
+
+        var headline = articles.headline.main;
+        if (headline) {
+          articleContent.append("<h5>" + "<strong>" + headline + "<strong>" + "<h5>")
+        }
+
+        var articleAbstract = articles.abstract;
+        if (articleAbstract) {
+          articleContent.append(articleAbstract).attr("class", "article-row-content-description");
+        }
+
+        var articleUrl = articles.web_url;
+        articleContent.append("<p>" + "<br>" + "<a>" + articleUrl + "<a>" + "<p>").attr("href", articleUrl);
+      }
+    });
+  }
+
