@@ -40,7 +40,7 @@ $("#search-btn").on("click", function () {
 
 function Forecast() {
   var city = $("#search-city").val();
-  var state = $("#state-selector").val();
+  var state = $("#search-state").val();
   var queryVal = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city},${state}&key=${apiKey}`;
   $.ajax({
     type: "GET",
