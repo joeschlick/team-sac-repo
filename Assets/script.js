@@ -13,7 +13,12 @@ $(document).ready(function () {
   });
 
   function articleSearch(city, state) {
-    var newsQueryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + city + " " + state + "&api-key=6bx62GJuVcNmyKs61ltfKzawldq2gfs0";
+    var newsQueryURL =
+      "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+      city +
+      " " +
+      state +
+      "&api-key=6bx62GJuVcNmyKs61ltfKzawldq2gfs0";
     console.log(newsQueryURL);
     $.ajax({
       url: newsQueryURL,
@@ -23,26 +28,27 @@ $(document).ready(function () {
       console.log(response1);
 
       for (let i = 0; i < 5; i++) {
-          var articles = response1.response.docs[i]
-          var articleList = $("<ul>")
-          $("#article-space").append(articleList)
-          var listItem = $("<li>")
+        var articles = response1.response.docs[i];
+        var articleSpace = $("#article-space");
+        var articleRow = $("<div>").attr("class", "article-row");
+        var articleContent = $("<div>").attr("class", "article-content");
+        articleSpace.append(articleRow);
+        articleRow.append(articleContent);
 
-          var headline = articles.headline.main
-          if (headline) {
-            listItem.append("<h5>" + headline + "<h5>")
-          }
-          
-          var articleAbstract = articles.abstract
-          if (articleAbstract) {
-            listItem.append(articleAbstract)
-          }
-          
-          console.log(articleAbstract)
-          articleList.append(listItem)
+        var headline = articles.headline.main;
+        if (headline) {
+          articleContent.append("<h5>" + "<strong>" + headline + "<strong>" + "<h5>")
+        }
+
+        var articleAbstract = articles.abstract;
+        if (articleAbstract) {
+          articleContent.append(articleAbstract).attr("class", "article-row-content-description");
+        }
+
+        var articleUrl = articles.web_url;
+        articleContent.append("<p>" + "<br>" + "<a>" + articleUrl + "<a>" + "<p>").attr("href", articleUrl);
       }
     });
-
   }
 
   console.log("loaded the javascript");
