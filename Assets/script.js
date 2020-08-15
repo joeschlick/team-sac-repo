@@ -41,12 +41,9 @@ $("#search-btn").on("click", function() {
 })
 
 function Forecast() {
-     var queryVal = `https://api.weatherbit.io/v2.0/forecast/daily?city=truckee,california&key=${apiKey}`
-    // var queryVal = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city},${state}&key=${apiKey}`
-    // I need to make changes to the city and state in the future. 
-    // I either change all state to 2 letter
-    // Or in the state names, we need to make the spaces in state names to a + sign.
-    // not sure what is better.
+    var city = $("#search-city").val()
+    var state = $("#search-state").val()
+    var queryVal = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city},${state}&key=${apiKey}`
     $.ajax({
         type: "GET",
         url: queryVal
@@ -68,7 +65,6 @@ function Forecast() {
             <p>Current Condition: ${apiFunction.data[i].weather.description}
             <p>Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
             <p>Gusts up to: ${Math.round(kphConvertGusts)} MPH
-
             </div>`)}
             else if (i >= 7){break;}
             
@@ -81,7 +77,6 @@ function Forecast() {
             <p>Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
             <p>Gusts up to: ${Math.round(kphConvertGusts)} MPH
             </div>`)
-        }
-          
+        }   
     })
-}
+}    
