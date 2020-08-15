@@ -1,21 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2020 Travel Guide</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
+
   <body>
+    <div class="row expanded collapse">
+      <div class="column">
+        <div class="large-article-header">
+          <div class="large-article-header-content">
+            <div class="center-container">
+              <div class="article-date">
+                <p>Published on Jan 12, 2016</p>
+              </div>
+              <div class="article-title">
+                <h1>A Great Big Article Title Goes Here</h1>
+              </div>
+              <div class="article-details">
+                <div class="article-author">
+                  <img src="https://unsplash.it/50/50?image=1005" alt="" />
+                  <a href="#">Jane Austen</a>
+                </div>
+                <div class="article-comments">
+                  <a href="#"
+                    ><i class="fa fa-comment" aria-hidden="true"></i> 3
+                    Comments</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="header" class="callout large">
       <div class="row column text-center">
         <h1 id="header-text">Where would you like to travel?</h1>
         <div class="medium-6 columns">
-        <input  id="search-city" type="text" placeholder="Input City">
+          <input id="search-city" type="text" placeholder="Input City" />
         </div>
-        
+      </div>
+
+      <div class="row column text-center">
         <div class="medium-6 columns">
           <select name="states" id="search-state">
             <option value="AL">Alabama</option>
@@ -57,8 +91,8 @@
             <option value="OR">Oregon</option>
             <option value="PA">Pennsylvania</option>
             <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option> 
-            <option value="SD">South Dakota</option> 
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
             <option value="TN">Tennessee</option>
             <option value="TX">Texas</option>
             <option value="UT">Utah</option>
@@ -69,14 +103,20 @@
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
+          <button class="alert button" id="search-btn">Search</button>
         </div>
+
+      </div>
+    </div>
+
+    <!-- forecast section start -->
+    <!-- medium-2 columns -->
         <button class="alert button" id="search-btn">Search</button>
       </div>
   
      <!-- forecast section start -->
     <!-- medium-2 columns -->
 
-    
     <div class="row">
       <div class="five-day-forecast" id="five-day-forecast"></div>
     </div>
@@ -85,18 +125,21 @@
       
     <div class="row">
 
-      <!-- <div class="medium-12">
-        <iframe style="width: 800px; height: 1080px" src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa#/" frameborder="0" scrolling="no" ></iframe>
-      </div>
-
 
       <div class="medium-6 columns medium-push-6 covid-data">
-        <iframe style="width: 600px; height: 855px" src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa#/" frameborder="0" scrolling="no"></iframe>
+        <iframe
+          style="width: 600px; height: 855px;"
+          src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa#/"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </div>
+    </div>
 
     </div>
       
     <div class="article-row-section">
+
       <div class="article-row-section-inner" id="article-space">
     
         <h2 class="article-row-section-header">ARTICLES</h2>
@@ -109,6 +152,3 @@
     <script src="./assets/script.js"></script>
   </body>
 </html>
-
-
-
