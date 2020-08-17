@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  });
+
   var runSearch = $("#run-search");
 
   runSearch.click(function () {
@@ -137,21 +141,11 @@ function Forecast() {
     });
   }
 
-
-
-
-
-
-
-
-
-
-
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = $("#myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = $("#myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
