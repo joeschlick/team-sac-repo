@@ -166,3 +166,28 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+$("#myBtn").on("click", function () {
+  console.log("on click button");
+  $("#modal-text").empty();
+  modalFunction();
+});
+
+function modalFunction() {
+  var state = $("#search-state").val();
+  var newsQueryURL = "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true"
+  console.log(newsQueryURL);
+  $.ajax({
+    url: newsQueryURL,
+    method: "GET",
+    dataType: "json",
+  }).then(function (response) {
+    console.log(response);
+    $("#modal-text").empty();
+    $("#modal-text").append(`
+    <p>${state}</p>
+    `);
+  });
+}
+
+
