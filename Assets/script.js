@@ -55,9 +55,9 @@ function Forecast() {
       var kphConvertGusts = apiFunction.data[i].wind_gust_spd / 1.609344;
 
       if (i === 2) {
-        $("#five-day-forecast").append(`<div class="medium-2 columns" style="background-color: rgb(57, 57, 57); color: #fff;>
-            <h5 class="fdf">Today In: ${apiFunction.city_name} </h5>
-            <img class="images" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
+        $("#five-day-forecast").append(`<div class="card small-6 large-2 columns" id="weather-card">
+            <h5 class="fdf" style="padding-top: 10px;">Today In: ${apiFunction.city_name} </h5>
+            <img class="images" id="image-hover-effect" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
             <p class="fdf">High Temp: ${Math.round(highTempInFahrenheit)}</p>
             <p class="fdf">Low Temp: ${Math.round(lowTempInFahrenheit)}</p>
             <p class="fdf">Current Condition: ${apiFunction.data[i].weather.description}
@@ -70,9 +70,9 @@ function Forecast() {
       const myDate = new Date(
         apiFunction.data[i].valid_date
       ).toLocaleDateString();
-      $("#five-day-forecast").append(`<div class="medium-2 columns" style="background-color: rgb(57, 57, 57); color: #fff;">
+      $("#five-day-forecast").append(`<div class="card small-6 large-2 columns" id="weather-card">
              <h5 class="fdf" style="padding-top: 12px;">${myDate}</h5>
-             <img class="images" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
+             <img class="images tooltiptext" id="image-hover-effect" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
             <p class="fdf">High Temp: ${Math.round(highTempInFahrenheit)}</p>
             <p class="fdf">LowTemp: ${Math.round(lowTempInFahrenheit)}</p>
             <p class="fdf">Current Condition: ${apiFunction.data[i].weather.description}
@@ -137,3 +137,38 @@ function Forecast() {
     });
   }
 
+
+
+
+
+
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
