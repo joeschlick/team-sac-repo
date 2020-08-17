@@ -222,4 +222,8 @@ body {
   color: #fff;
 }
 
-
+  /* js styling */
+  .fdf{
+    font-size: 5%;
+    margin: -3px;
+  }
