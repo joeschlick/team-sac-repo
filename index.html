@@ -83,13 +83,25 @@
               </div>
               <div class="center-container"></div>
                   <button class="alert button" id="search-btn">Search</button>
-                  <button class="alert button" id="search-btn">Travel Advice</button>
+                   <button class="button" data-open="exampleModal1">Travel Advice</button>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="reveal" id="exampleModal1" data-reveal>
+      <h1>Awesome. I Have It.</h1>
+      <p class="lead">Your couch. It is mine.</p>
+      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p> -->
 
     <div class="row">
       <div class="five-day-forecast" id="five-day-forecast">
@@ -99,7 +111,6 @@
     <!-- forecast section end -->
       
     <div class="row">
-
       <div class="medium-6 columns covid-data">
         <iframe
           style="width: 600px; height: 855px;"
@@ -107,18 +118,20 @@
           frameborder="0"
           scrolling="no"
         ></iframe>
-
       </div>
     </div>
 
-    </div>
-      
     <div class="article-row-section">
-
       <div class="article-row-section-inner" id="article-space">
-    
         <h2 class="article-row-section-header">ARTICLES</h2>
-    
+      </div>
+    </div>
+
+    <div class=“sticky-footer-css”>
+      <div class=“row expanded flex-dir-column”>
+        <div class=“columns shrink footer text-center”>
+          <p>© Team Sac</p>
+        </div>
       </div>
     </div>
 
@@ -126,4 +139,5 @@
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="./assets/script.js"></script>
   </body>
+
 </html>
