@@ -114,6 +114,7 @@ function Forecast() {
         var articleSpace = $("#article-space");
         var articleRow = $("<div>").attr("class", "article-row");
         var articleContent = $("<div>").attr("class", "article-content");
+        var articleUrlContent = $("<p>")
         articleSpace.append(articleRow);
         articleRow.append(articleContent);
 
@@ -128,7 +129,10 @@ function Forecast() {
         }
 
         var articleUrl = articles.web_url;
-        articleContent.append("<p>" + "<br>" + "<a>" + articleUrl + "<a>" + "<p>").attr("href", articleUrl);
+        articleContent.append(articleUrlContent)
+        var articleUrlLink = $("<a>").attr({"href": articleUrl, "target": "blank"});
+        articleUrlContent.append(articleUrlLink)
+        articleUrlLink.append(articleUrl)
       }
     });
   }
