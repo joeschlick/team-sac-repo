@@ -224,6 +224,18 @@ sticky-footer-css {
 
   /* js styling */
   .fdf{
-    font-size: 5%;
+    font-size: 80%;
     margin: -3px;
   }
+
+#weather-card {
+  background-color: rgb(57, 57, 57); 
+  color: #fff;
+  height: 275px;
+  border-style: solid;
+  border-color: #f5f9e9;
+}
+
+#image-hover-effect:hover{
+  background-color: hotpink !important;
+}
