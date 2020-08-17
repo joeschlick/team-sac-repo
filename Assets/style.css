@@ -219,6 +219,8 @@ sticky-footer-css {
   color: #fff;
 }
 
-.sticky-footer-css-body {
-  overflow: auto;
+/* js styling */
+.fdf {
+  font-size: 5%;
+  margin: -3px;
 }

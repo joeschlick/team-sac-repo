@@ -55,13 +55,14 @@ function Forecast() {
       var kphConvertGusts = apiFunction.data[i].wind_gust_spd / 1.609344;
 
       if (i === 2) {
-        $("#five-day-forecast").append(`<div class="medium-2 columns">
-        <h3>Today In: ${apiFunction.city_name} </h3>
-            <p>High Temp: ${Math.round(highTempInFahrenheit)}</p>
-            <p>Low Temp: ${Math.round(lowTempInFahrenheit)}</p>
-            <p>Current Condition: ${apiFunction.data[i].weather.description}
-            <p>Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
-            <p>Gusts up to: ${Math.round(kphConvertGusts)} MPH
+        $("#five-day-forecast").append(`<div class="medium-2 columns" style="background-color: rgb(57, 57, 57); color: #fff;>
+            <h5 class="fdf">Today In: ${apiFunction.city_name} </h5>
+            <img class="images" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
+            <p class="fdf">High Temp: ${Math.round(highTempInFahrenheit)}</p>
+            <p class="fdf">Low Temp: ${Math.round(lowTempInFahrenheit)}</p>
+            <p class="fdf">Current Condition: ${apiFunction.data[i].weather.description}
+            <p class="fdf">Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
+            <p class="fdf" style="padding-bottom: 4px;">Gusts up to: ${Math.round(kphConvertGusts)} MPH
             </div>`);
       } else if (i >= 7) {
         break;
@@ -69,13 +70,14 @@ function Forecast() {
       const myDate = new Date(
         apiFunction.data[i].valid_date
       ).toLocaleDateString();
-      $("#five-day-forecast").append(`<div class="medium-2 columns">
-            <h3>${myDate} in ${apiFunction.city_name}</h3>
-            <p>High Temp: ${Math.round(highTempInFahrenheit)}</p>
-            <p>LowTemp: ${Math.round(lowTempInFahrenheit)}</p>
-            <p>Current Condition: ${apiFunction.data[i].weather.description}
-            <p>Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
-            <p>Gusts up to: ${Math.round(kphConvertGusts)} MPH
+      $("#five-day-forecast").append(`<div class="medium-2 columns" style="background-color: rgb(57, 57, 57); color: #fff;">
+             <h5 class="fdf" style="padding-top: 12px;">${myDate}</h5>
+             <img class="images" src="https://www.weatherbit.io/static/img/icons/${apiFunction.data[i].weather.icon}.png">
+            <p class="fdf">High Temp: ${Math.round(highTempInFahrenheit)}</p>
+            <p class="fdf">LowTemp: ${Math.round(lowTempInFahrenheit)}</p>
+            <p class="fdf">Current Condition: ${apiFunction.data[i].weather.description}
+            <p class="fdf">Wind-Direction: ${apiFunction.data[i].wind_cdir_full}
+            <p class="fdf" style="padding-bottom: 10px;">Gusts up to: ${Math.round(kphConvertGusts)} MPH
             </div>`);
     }
   });
