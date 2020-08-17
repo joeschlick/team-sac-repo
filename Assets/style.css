@@ -202,9 +202,7 @@ sticky-footer-css {
   display: -ms-flexbox;
   display: flex;
 }
-.sticky-footer-css-body {
-  overflow: auto;
-}
+
 .sticky-footer-css .header .menu a {
   color: #fff;
 }
