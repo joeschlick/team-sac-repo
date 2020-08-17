@@ -197,7 +197,7 @@ body {
   }
 }
 
-sticky-footer-css {
+.sticky-footer-css {
   height: 100vh;
   display: -webkit-flex;
   display: -ms-flexbox;
