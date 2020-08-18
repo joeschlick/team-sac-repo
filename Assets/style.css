@@ -1,3 +1,4 @@
+/* Header */
 .large-article-header {
   background: url(./image/FullSizeRender.jpg);
   background-repeat: no-repeat;
@@ -57,6 +58,7 @@ body {
   color: whitesmoke;
 }
 
+/* Article section */
 .article-row-section {
   max-width: 75rem;
   margin-right: auto;
@@ -159,44 +161,7 @@ body {
   font-size: 1.5rem;
 }
 
-.article-row-content-description {
-  font-size: 1.25rem;
-}
-
-.article-row-content-author,
-.article-row-content-time {
-  font-size: 0.875rem;
-  margin-bottom: 0;
-  color: #8a8a8a;
-}
-
-.article-row-reversed .article-row-content {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  padding: 0 1.5rem 0 0;
-}
-
-.article-row-reversed .article-row-img {
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 0 0 1.5rem 0;
-}
-
-@media print, screen and (min-width: 40em) {
-  .article-row-reversed .article-row-content {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
-  }
-  .article-row-reversed .article-row-img {
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
-  }
-}
-
+/* Footer */
 .sticky-footer-css {
   height: 100vh;
   display: -webkit-flex;
@@ -228,6 +193,7 @@ body {
     margin: -3px;
   }
 
+  /* Weather field */
 #weather-card {
   background-color: rgb(57, 57, 57); 
   color: #fff;
@@ -236,6 +202,7 @@ body {
   border-color: #f5f9e9;
 }
 
+/* Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
