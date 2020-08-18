@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+  $(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  });
+
   var runSearch = $("#run-search");
 
   runSearch.click(function () {
