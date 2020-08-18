@@ -236,17 +236,6 @@ body {
   border-color: #f5f9e9;
 }
 
-#image-hover-effect:hover{
-  background-color: hotpink !important;
-}
-
-
-
-
-
-
-
-
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
