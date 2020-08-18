@@ -142,10 +142,10 @@ function Forecast() {
   }
 
 // Get the modal
-var modal = $("#myModal");
+var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = $("#myBtn");
+var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -175,6 +175,7 @@ $("#myBtn").on("click", function () {
 
 function modalFunction() {
   var state = $("#search-state").val();
+  console.log(state)
   var newsQueryURL = "https://api.apify.com/v2/key-value-stores/moxA3Q0aZh5LosewB/records/LATEST?disableRedirect=true"
   console.log(newsQueryURL);
   $.ajax({
