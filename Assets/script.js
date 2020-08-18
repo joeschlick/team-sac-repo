@@ -113,7 +113,9 @@ runSearch.click(function () {
   console.log(searchCity);
   console.log(searchState);
   articleSearch(searchCity, searchState);
-  $("#article-search").empty();
+  $("#article-space").empty()
+  $("#article-row").empty()
+  $("#article-content").empty()
 });
 
 function articleSearch(city1, state1) {
@@ -131,7 +133,6 @@ function articleSearch(city1, state1) {
   }).then(function (response1) {
     console.log(response1);
     for (let i = 0; i < 5; i++) {
-      $("#article-search").empty();
       var articles = response1.response.docs[i];
       var articleSpace = $("#article-space");
       var articleRow = $("<div>").attr("class", "article-row");
