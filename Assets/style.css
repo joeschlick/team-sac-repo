@@ -263,11 +263,15 @@ body {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  font-family: 'Russo One', sans-serif;
+  background-color: black;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
+  color: red;
+  font-size: 400%;
+  
 }
 
 /* The Close Button */
