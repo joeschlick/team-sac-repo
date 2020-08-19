@@ -1,8 +1,5 @@
 # The Cynical Travelers Guide To 2020
 
-https://joeschlick.github.io/team-sac-repo/
-
-![Alt text](./Assets/image/readme.png "Homepage")
 
 ## Description 
 When traveling within the United States in 2020, I want to know what kind of terrible things are happening in my destination city. Then I can make an informed decisions regarding my personal safety, and decide if it’s safe to travel there at all!
@@ -18,6 +15,9 @@ Our site would consist of an input field for destination city and state. Once th
     Breaking local news stories to inform me of any current or impending disasters.
 
 ## Usage
+https://joeschlick.github.io/team-sac-repo/
+
+![Alt text](./Assets/image/readme.png "Homepage")
 
 ## Credits
 Team SAC personnel:
